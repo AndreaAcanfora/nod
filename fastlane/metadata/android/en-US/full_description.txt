@@ -1,0 +1,10 @@
+<p>AI agents now work for hours on their own: they write code, deploy, pay invoices, delete files. When they reach something they should not do without you, nod puts the question on your phone.</p>
+<p>The agent asks, your phone buzzes, you read what it wants to do and why, and you approve with your fingerprint or decline with a tap. Your answer is signed by a key that never leaves the phone.</p>
+<ul>
+<li>Approvals: “Force-push to main?”, “Run the migration on production?”</li>
+<li>Forms: the agent asks for an environment, a number, a date</li>
+<li>History of what you approved, declined or let expire</li>
+<li>Requests marked high-stakes open in the browser for a passkey</li>
+</ul>
+<p>nod speaks A2H, the open Agent-to-Human protocol, through a2h-gateway, a small open source server you run yourself. Any agent that can make an HTTP request can use it; agents that speak MCP (Claude Code, Cursor and others) get it as a tool.</p>
+<p>No accounts, no tracking, no servers of ours, no Google services. Notifications use UnifiedPush (for example with ntfy); without it, nod checks for requests when you open it.</p>

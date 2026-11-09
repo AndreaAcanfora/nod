@@ -83,9 +83,14 @@ or deleting anything.”*
 
 | Platform | How |
 |---|---|
-| Android | APK from [Releases](https://github.com/AndreaAcanfora/nod/releases). F-Droid: coming. |
+| Android | [Obtainium](https://github.com/ImranR98/Obtainium) (updates automatically), or the APK from [Releases](https://github.com/AndreaAcanfora/nod/releases) |
 | iOS | Build from source for now (`flutter build ios`). |
 | Try it | [Web demo](https://andreaacanfora.github.io/nod/) with sample requests |
+
+<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/AndreaAcanfora/nod"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" height="54"></a>
+
+Release APKs are signed with this certificate (SHA-256):
+`66:0B:10:01:93:F8:9F:56:DB:26:8B:BD:36:70:49:DF:36:DE:B8:BA:F0:9A:A5:7B:7B:D6:9E:1A:63:BA:46:3D`
 
 Notifications on Android use [UnifiedPush](https://unifiedpush.org): install a
 distributor such as [ntfy](https://ntfy.sh) (free, no Google account). Without
@@ -150,11 +155,19 @@ Flutter dependency.
 
 ## Roadmap
 
-- [ ] F-Droid
+- [ ] F-Droid (once the app has a few months of releases behind it)
 - [ ] Keys in the Secure Enclave / StrongBox, with biometrics bound to the key
 - [ ] iOS push (needs an Apple developer account)
 - [ ] Wear OS and Apple Watch: approve from the wrist
 - [ ] Rich bodies: diffs and code with syntax highlighting
+
+## How it is made
+
+nod and the app channel of a2h-gateway were written with the help of an AI
+coding assistant (Claude), reviewed and directed by the maintainer. Every
+change goes through the tests and CI described above, including the
+end-to-end tests against a real gateway. Reports and reviews from people are
+especially welcome.
 
 ## License
 

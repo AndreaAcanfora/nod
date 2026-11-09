@@ -42,6 +42,7 @@ android {
         if (keyProps.containsKey("storeFile")) {
             create("release") {
                 storeFile = file(keyProps.getProperty("storeFile"))
+                storeType = keyProps.getProperty("storeType", "pkcs12")
                 storePassword = keyProps.getProperty("storePassword")
                 keyAlias = keyProps.getProperty("keyAlias")
                 keyPassword = keyProps.getProperty("keyPassword")

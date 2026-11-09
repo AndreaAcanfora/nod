@@ -26,9 +26,10 @@ jobs:
           KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
         run: |
           test -n "$KEYSTORE" || { echo "::error::ANDROID_KEYSTORE_BASE64 is not set: releases must be signed with the release key"; exit 1; }
-          echo "$KEYSTORE" | base64 -d > "$RUNNER_TEMP/release.jks"
+          echo "$KEYSTORE" | base64 -d > "$RUNNER_TEMP/release.p12"
           cat > android/key.properties <<PROPS
-          storeFile=$RUNNER_TEMP/release.jks
+          storeFile=$RUNNER_TEMP/release.p12
+          storeType=pkcs12
           storePassword=$KEYSTORE_PASSWORD
           keyAlias=nod
           keyPassword=$KEYSTORE_PASSWORD
